@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'demos/contact'
 
+  post 'demos/save_user'
+
   root 'demos#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

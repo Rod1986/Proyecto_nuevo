@@ -9,12 +9,10 @@ class DemosController < ApplicationController
   end
 
   def contact
-    render layout:'landing'
-  end
-
-  def show
+    #render layout:'landing'
     @users = User.all
   end
+
 
   def save_user
     if params[:name].present? && params[:lastname].present? && params[:age].present?
@@ -34,6 +32,6 @@ class DemosController < ApplicationController
   protected
   
   def get_data
-    @users = ['hola','chao']
+    @usuarios = ['hola','chao']
   end
 end

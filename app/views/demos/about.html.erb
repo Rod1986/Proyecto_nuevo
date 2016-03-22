@@ -5,11 +5,11 @@
 <div class="jumbotron">
 <h1>Users</h1>
 
-	<%#= form_tag demos_save_user_path, method:'post' do %> 
+	<%= form_tag demos_save_user_path, method:'post' do %> 
 	<!-- form_tag es el helper -->
 
 	<div class="form-group">
-		<%= label_tag :name, 'Name' %>
+		<%= label_tag :name, 'name' %>
 		<!-- si no le pongo string, queda el nombre del parametro -->
 		<%= text_field_tag :name, nil, class:'form-control' %>
 	</div>
@@ -21,19 +21,19 @@
 	</div>
 
 	<div class="form-group">
-		<%= label_tag :age, 'Age' %>
+		<%= label_tag :age, 'age' %>
 		<!-- si no le pongo string, queda el nombre del parametro -->
 		<%= text_field_tag :age, nil, class:'form-control' %>
 	</div>
 
 	<div class="form-group">
-		<%= submit_tag 'Send', class:'btn btn-success' %>
+		<%= submit_tag 'send', class:'btn btn-success' %>
 	</div>
 
 	<% end %>
 
-	<%# if notice %>
-		<%#= notice %>
-	<%# elsif alert %>
-		<%#= alert %>
-	<%# end %>
+	<% if notice %>
+		<%= notice %>
+	<% elsif alert %>
+		<%= alert %>
+	<% end %>
