@@ -1,2 +1,13 @@
 <h1>Contact</h1>
 <p>Find me in app/views/demos/contact.html.erb</p>
+<%= link_to 'Index', root_path, class:"btn btn-success" %>
+
+<ul class="jumbotron">
+	<%= @users.each do |user| %>
+		<li>
+			<p>name: <%= user.name %></p>
+			<p>last Name: <%= user.lastname %></p>
+			<p>age: <%= user.age %></p>
+		</li>
+	<% end %>
+</ul>

@@ -10,7 +10,9 @@
 
 <div class="container">
 	<%= render :partial => "shared/navbar2" %>
-	<%= yield %>
+	<div class="jumbotron">
+		<%= yield %>
+		<%= @users %>
 </div>
 
 </body>

@@ -1,3 +1,39 @@
 <h1>About</h1>
 <p>Find me in app/views/demos/about.html.erb</p>
 <%= image_tag('city') %>
+
+<div class="jumbotron">
+<h1>Users</h1>
+
+	<%#= form_tag demos_save_user_path, method:'post' do %> 
+	<!-- form_tag es el helper -->
+
+	<div class="form-group">
+		<%= label_tag :name, 'Name' %>
+		<!-- si no le pongo string, queda el nombre del parametro -->
+		<%= text_field_tag :name, nil, class:'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<%= label_tag :lastname, 'lastname' %>
+		<!-- si no le pongo string, queda el nombre del parametro -->
+		<%= text_field_tag :lastname, nil, class:'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<%= label_tag :age, 'Age' %>
+		<!-- si no le pongo string, queda el nombre del parametro -->
+		<%= text_field_tag :age, nil, class:'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<%= submit_tag 'Send', class:'btn btn-success' %>
+	</div>
+
+	<% end %>
+
+	<%# if notice %>
+		<%#= notice %>
+	<%# elsif alert %>
+		<%#= alert %>
+	<%# end %>
